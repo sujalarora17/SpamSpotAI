@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI text Assistant - Your Intelligent Assistant</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>AI text Assistant</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="pages/chat.html"><i class="fas fa-comment-dots"></i> Chat</a></li>
+                <li><a href="pages/summarize.html"><i class="fas fa-file-alt"></i> Summarize</a></li>
+                <li><a href="pages/translate.html"><i class="fas fa-language"></i> Translate</a></li>
+                <li><a href="pages/dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="pages/settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button id="loginBtn" onclick="showLoginModal()">Login</button>
+            <button id="signupBtn" onclick="showSignupModal()">Sign Up</button>
+            <div id="userProfile" style="display: none;">
+                <span id="username">User</span>
+                <button id="logoutBtn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to AI text Assistant</h1>
+                <h2>Your Intelligent Assistant for Multiple Tasks</h2>
+                <p>Powered by advanced AI models to help you chat, summarize, translate, and more!</p>
+                <div class="cta-buttons">
+                    <a href="pages/chat.html" class="cta-button">Start Chatting</a>
+                    <a href="#features" class="cta-button secondary">Explore Features</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/ai-assistant.png" alt="AI Assistant" onerror="this.src='https://via.placeholder.com/500x400?text=AI+Assistant'">
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Our Features</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>AI Chatbot</h3>
+                    <p>Engage in natural conversations with our advanced AI assistant powered by DeepSeek R1.</p>
+                    <a href="pages/chat.html" class="feature-link">Try Now</a>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Text Summarization</h3>
+                    <p>Quickly summarize long articles, papers, or documents into concise summaries.</p>
+                    <a href="pages/summarize.html" class="feature-link">Try Now</a>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-language"></i>
+                    <h3>Translation</h3>
+                    <p>Translate text between multiple languages with high accuracy and natural phrasing.</p>
+                    <a href="pages/translate.html" class="feature-link">Try Now</a>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Usage Analytics</h3>
+                    <p>Track your usage patterns and get insights into how you interact with our AI tools.</p>
+                    <a href="pages/dashboard.html" class="feature-link">View Dashboard</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Choose a Tool</h3>
+                    <p>Select from our range of AI-powered tools based on your needs.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Input Your Query</h3>
+                    <p>Type or speak your question, text, or request.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Results</h3>
+                    <p>Receive instant, accurate responses powered by advanced AI models.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Save & Share</h3>
+                    <p>Save your results for future reference or share them with others.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"AI text Assistant has revolutionized how I research for my college assignments. The summarization tool saves me hours of reading!"</p>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="User" onerror="this.src='https://via.placeholder.com/50x50?text=User'">
+                        <div>
+                            <h4>Sarah Johnson</h4>
+                            <p>College Student</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"The translation feature is incredibly accurate. I use it daily for my international business communications."</p>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="User" onerror="this.src='https://via.placeholder.com/50x50?text=User'">
+                        <div>
+                            <h4>Michael Chen</h4>
+                            <p>Business Professional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"As a professor, I appreciate the accuracy and educational value this platform provides to my students."</p>
+                    <div class="testimonial-author">
+                        <img src="images/user3.jpg" alt="User" onerror="this.src='https://via.placeholder.com/50x50?text=User'">
+                        <div>
+                            <h4>Dr. Emily Rodriguez</h4>
+                            <p>University Professor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AI text Assistant</h3>
+                <p>Your intelligent assistant for multiple tasks, powered by advanced AI models.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/chat.html">Chat</a></li>
+                    <li><a href="pages/summarize.html">Summarize</a></li>
+                    <li><a href="pages/translate.html">Translate</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-envelope"></i> contact@aitextassistant.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AI text Assistant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="showSignupModal()">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSignupModal()">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupConfirmPassword">Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required>
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#" onclick="showLoginModal()">Login</a></p>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
